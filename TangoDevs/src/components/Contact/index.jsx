@@ -107,10 +107,10 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: rgb(255, 25, 0);
+  background: linear-gradient(225deg, rgb(255, 0, 0) 0%, rgb(255, 136, 0) 100%);
+  background: -moz-linear-gradient(225deg, rgb(255, 0, 0) 0%, rgb(255, 119, 0) 100%);
+  background: -webkit-linear-gradient(225deg, rgb(255, 0, 0) 0%, rgb(255, 98, 0) 100%);
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -130,7 +130,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    emailjs.sendForm('service_6jw38uh', 'template_o3j1oh7', form.current, 'ePsTtr0xZJnMgBKZH')
       .then((result) => {
         setOpen(true);
         form.current.reset();
@@ -142,17 +142,17 @@ const Contact = () => {
 
 
   return (
-    <Container>
+    <Container id="Contact">
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        <Title>Contacto</Title>
+        <Desc>Escribinos por cualquier sugerencia o proyecto que tengas para nosotros!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>Email 🚀</ContactTitle>
+          <ContactInput placeholder="Tu Email" name="from_email" />
+          <ContactInput placeholder="Nombre" name="from_name" />
+          <ContactInput placeholder="Asunto" name="subject" />
+          <ContactInputMessage placeholder="Mensaje" rows="4" name="message" />
+          <ContactButton type="submit" value="Enviar" />
         </ContactForm>
         <Snackbar
           open={open}

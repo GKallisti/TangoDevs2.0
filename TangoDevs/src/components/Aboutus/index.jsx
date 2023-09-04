@@ -82,15 +82,13 @@ const index = () => {
         <Container id="Aboutus">
             <Wrapper>
                 <Title>Acerca de Nosotros</Title>
-                <Desc>
-                    My education has been a journey of self-discovery and growth. My educational details are as follows.
-                </Desc>
+                
                 <TimelineSection>
                     <Timeline>
                         {Aboutus.map((About,index) => (
                             <TimelineItem >
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard education={About}/>
+                                    <EducationCard teamMembers={About}/>
                                 </TimelineContent>
                                 <TimelineSeparator>
                                     <TimelineDot variant="outlined" color="secondary" />

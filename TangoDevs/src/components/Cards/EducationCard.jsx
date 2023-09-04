@@ -74,12 +74,12 @@ const Top = styled.div`
 `
 
 const Image = styled.img`
-    height: 50px;
+    height: 15em;
     background-color: #000;
     border-radius: 10px;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
-        height: 40px;
+        height: 10em
     }
 `
 
@@ -108,40 +108,24 @@ const Degree = styled.div`
     }
 `
 
-const Date = styled.div`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
-    @media only screen and (max-width: 768px){
-        font-size: 10px;
-    }
-`
-
-const Grade = styled.div`
-    font-size: 14px;
-    font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
 
 
 
-const EducationCard = ({ education }) => {
+const EducationCard = ({ teamMembers }) => {
     return (
         <Card>
             <Top>
-                <Image src={education.img} />
+                <Image src={teamMembers.img} />
                 <Body>
-                    <Name>{education.school}</Name>
-                    <Degree>{education.degree}</Degree>
-                    <Date>{education.date}</Date>
+                    <Name>{teamMembers.name}</Name>
+                    <Degree> <b> Especializacion: </b> {teamMembers.specialization}</Degree>
                 </Body>
             </Top>
-            <Grade><b>Grade: </b>{education.grade}</Grade>
+            
             <Description>
-                <Span>{education.desc}</Span>
+                <Span>{teamMembers.desc}</Span>
+                <a href={teamMembers.github} target="_blank" rel="noreferrer">Github</a>
+                <a href={teamMembers.linkedin} target="_blank" rel="noreferrer">Linkedin</a>
             </Description>
         </Card>
     )

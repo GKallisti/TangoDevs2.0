@@ -4,17 +4,18 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/HeroImage.png'
 import Typewriter from 'typewriter-effect';
 import { Inicio } from '../../data/constants';
+import Bganimado from '../HeroBgAnimation/Bganimado.jsx';
 
 const HeroSection = () => {
     return (
         <div id="Inicio">
             <HeroContainer>
                 <HeroBg>
-                    <HeroBgAnimation />
+                    <Bganimado />
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hola! Nosotros somos <br /> {Inicio.name}</Title>
+                        <Title> Hola! Nosotros somos <br /> {Inicio.name}</Title>
                         <TextLoop>
                             
                             <Span>
@@ -28,7 +29,7 @@ const HeroSection = () => {
                             </Span>
                         </TextLoop>
                         <SubTitle>{Inicio.description}</SubTitle>
-                        <ResumeButton href='#Aboutus'> Mira nuestros trabajos: </ResumeButton>
+                        <ResumeButton href='#Contact'> Contactanos </ResumeButton>
                      
                     </HeroLeftContainer>
 

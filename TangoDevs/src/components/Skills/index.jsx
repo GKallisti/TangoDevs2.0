@@ -84,6 +84,7 @@ const SkillTitle = styled.h2`
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
 `
 
@@ -97,6 +98,7 @@ const SkillList = styled.div`
 
 const SkillItem = styled.div`
   font-size: 20px;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary + 80};
   border: 1px solid ${({ theme }) => theme.text_primary + 80};
@@ -132,7 +134,7 @@ const Skills = () => {
           {skills.map((skill) => (
             <Skill key={skill.id}>
               <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList >
+              <SkillList key={skill.id} >
                 {skill.skills.map((item) => (
                   <SkillItem>
                     <SkillImage src={item.image}/>
