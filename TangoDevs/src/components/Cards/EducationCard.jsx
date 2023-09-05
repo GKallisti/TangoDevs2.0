@@ -15,8 +15,8 @@ const Document = styled.img`
 
 const Description = styled.div`
     width: 100%;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 1.2em;
+    font-weight: 700;
     color: ${({ theme }) => theme.text_primary + 99};
     margin-bottom: 10px;
     @media only screen and (max-width: 768px){
@@ -91,8 +91,8 @@ const Body = styled.div`
 
 
 const Name = styled.div`
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: 700;
     color: ${({ theme }) => theme.text_primary + 99};
     @media only screen and (max-width: 768px){
         font-size: 14px;
@@ -100,11 +100,11 @@ const Name = styled.div`
 `
 
 const Degree = styled.div`
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 1em;
+    font-weight: 700;
     color: ${({ theme }) => theme.text_secondary + 99};
     @media only screen and (max-width: 768px){
-        font-size: 12px;
+        font-size: 1em;
     }
 `
 
@@ -124,8 +124,8 @@ const EducationCard = ({ teamMembers }) => {
             
             <Description>
                 <Span>{teamMembers.desc}</Span>
-                <a href={teamMembers.github} target="_blank" rel="noreferrer">Github</a>
-                <a href={teamMembers.linkedin} target="_blank" rel="noreferrer">Linkedin</a>
+                <a href={teamMembers.github} target="_blank" rel="noreferrer"> Github </a> <span/>
+                <a href={teamMembers.linkedin} target="_blank" rel="noreferrer"> Linkedin </a>
             </Description>
         </Card>
     )
