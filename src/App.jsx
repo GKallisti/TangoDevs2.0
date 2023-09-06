@@ -28,6 +28,11 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
+  let docTitle = document.title;
+  window.addEventListener("blur", ()=>{document.title= "Don't leave us "})
+
+  window.addEventListener("focus", ()=>document.title= docTitle)
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router >
