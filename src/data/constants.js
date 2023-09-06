@@ -331,7 +331,7 @@ export const projects = [
     description:
       "Este proyecto es un Juego de social deduction multijugador, donde los jugadores deben descubrir quien es el Familiar para poder sobrevivir.",
     image:
-      "https://camo.githubusercontent.com/fbf405040ae86b5d4a40f24e4ac034982cb8c0e2d850560ba64527997b258be8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
+      "https://firebasestorage.googleapis.com/v0/b/stuff-5f064.appspot.com/o/Screenshot%202023-09-05%20210926.png?alt=media&token=f3ff438c-5256-4684-a022-42cc483ffafd",
     tags: ["Construct3", "Unity", "Aseprite", "Firebase"],
     category: "Games",
     github: "https://github.com/",
