@@ -9,7 +9,6 @@ export const Inicio = {
   description:
     "Hola! Somos un grupo de amigos y desarrolladores fullstack que amamos los desafios y un dia nos dimos cuenta de que juntos somos mejores. Contanos tu proyecto, idea o plataforma y nosotros lo hacemos realidad.",
   linkedin: "https://www.linkedin.com/in//",
-  insta: "https://www.instagram.com//",
 };
 
 export const skills = [
@@ -268,7 +267,7 @@ export const projects = [
       "Figma",
     ],
     category: "web app",
-    github: "https://github.com",
+    github: "https://github.com/REVelazquez/Pf-LobbyLair",
     webapp: 'https://lobbylair-gkallisti.vercel.app/',
   },
   {
@@ -287,7 +286,7 @@ export const projects = [
       "PostgreSQL",
         ],
     category: "web app",
-    github: "https://github.com/",
+    github: "https://github.com/GKallisti/The-Bunker-Sala",
     webapp: "https://thebunkersala.vercel.app/",
   },
   {
@@ -325,7 +324,7 @@ export const projects = [
       "Figma",
     ],
     category: "web app",
-    github: "https://github.com/",
+    github: "https://github.com/GKallisti/Rastafi-landingpage",
     webapp: "https://.netlify.app/",
    
   },
@@ -339,7 +338,7 @@ export const projects = [
       "https://firebasestorage.googleapis.com/v0/b/stuff-5f064.appspot.com/o/Screenshot%202023-09-05%20210926.png?alt=media&token=f3ff438c-5256-4684-a022-42cc483ffafd",
     tags: ["Construct3", "Unity", "Aseprite", "Firebase"],
     category: "Games",
-    github: "https://github.com/",
+    github: "https://github.com/GKallisti/ElFamiliar",
     webapp: "https://.netlify.app/",
   },
   
