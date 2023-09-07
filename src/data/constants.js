@@ -48,7 +48,7 @@ export const skills = [
       {
         name: "Tailwind Css",
         image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+          "https://firebasestorage.googleapis.com/v0/b/stuff-5f064.appspot.com/o/tailwind.png?alt=media&token=edfee4c7-4379-40d2-b600-112d0d4bd126",
       }
     ],
   },
