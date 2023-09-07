@@ -46,7 +46,7 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "Bootstrap",
+        name: "Tailwind Css",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
       }
@@ -202,6 +202,7 @@ export const Aboutus = [
     img: "https://avatars.githubusercontent.com/u/118305965?s=400&u=485f73d77d9b7dd3f3ec80f66f9e263448034945&v=4",
     name: "Fernando Volpato",  
     github: 'https://github.com/fervolpato1991',
+    portfolio: 'https://dainty-sable-406283.netlify.app/#home',
     linkedin: 'https://www.linkedin.com/in/fernando-volpato-5bb718217/',
     desc: "Soy desarrollador full stack actualmente mas orientado al frontend, con background en abogacia, poseo conocimientos en tecnologia PERN, y en librerias como tailwind, me considero una persona que seria y analitica, con  aspiraciones a trabajar en grupos desarrollen proyectos tales como paginas web y en un futuro creación de videojuegos o ciberseguridad.",
     specialization: "Front-End",
@@ -211,6 +212,7 @@ export const Aboutus = [
     img: 'https://avatars.githubusercontent.com/u/124207301?v=4',
     name: "Gisella Gonzalez",
     github: 'https://github.com/GKallisti',
+    portfolio: 'https://portfolio-gkallisti.vercel.app/',
     linkedin: 'https://www.linkedin.com/in/gisella-gkallisti/',
     desc: "Hola! Soy una desarrolladora fullstack creativa y diseñadora de videojuegos, me especializo en pensar fuera de cajas, hacer memes y desarrollar y programar todo lo que tenga que ver con diseño creativo.",
     specialization: "Game Designer, Creative Developer",
@@ -220,6 +222,7 @@ export const Aboutus = [
     img: 'https://avatars.githubusercontent.com/u/125685144?v=4',
     name: "Nahuel Rotela",
     github: 'https://github.com/MNahuelRotela',
+    portfolio: 'https://nahuel-rotela-portfolio.vercel.app/',
     linkedin: 'https://www.linkedin.com/in/nahuelrotela/',
     desc: 'Tengo habilidades técnicas sólidas y pasión por la implementación de nuevas ideas.Logrando que todos los proyectos en los que he participado destaquen por una funcionalidad e interfaz limpia, pero por sobre todo la calidad humana que brindamos a los usuarios y al equipo de trabajo.',
     specialization: 'Full-Stack',
@@ -229,6 +232,7 @@ export const Aboutus = [
     img: 'https://avatars.githubusercontent.com/u/124008724?v=4',
     name: "Rodrigo Velasquez",
     github: 'https://github.com/REVelazquez',
+    portfolio: 'https://portfolio-revelazquez.vercel.app/',
     linkedin: 'https://www.linkedin.com/in/rodrigo-velazquez-9bb156267/',
     desc: "Hola! Me considero un comodin, puedo trabajar tanto en front-end como en back-end. ",
     specialization: 'Full-Stack',
@@ -238,6 +242,7 @@ export const Aboutus = [
     img: 'https://firebasestorage.googleapis.com/v0/b/stuff-5f064.appspot.com/o/262592212_4627071680705321_418512524188058664_n.jpg?alt=media&token=c44868d5-9393-4b10-9dea-4f27a20df9d5',
     name: "Santiago Solavaggione",
     github: 'https://github.com/Santjagor',
+    portfolio: 'https://www.linkedin.com/in/sms57/',
     linkedin: 'https://www.linkedin.com/in/sms57/',
     desc: "Soy un desarrollador fullstack con gran capacidad de trabajo en equipo y adaptabilidad",
     specialization: 'Full-Stack',

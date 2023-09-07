@@ -124,8 +124,9 @@ const EducationCard = ({ teamMembers }) => {
             
             <Description>
                 <Span>{teamMembers.desc}</Span>
-                <a href={teamMembers.github} target="_blank" rel="noreferrer"> Github </a> <span/>
-                <a href={teamMembers.linkedin} target="_blank" rel="noreferrer"> Linkedin </a>
+                <a href={teamMembers.github} target="_blank" rel="noreferrer"> Github </a> <span> │ </span>
+                <a href={teamMembers.linkedin} target="_blank" rel="noreferrer"> Linkedin </a> <span> │ </span>
+                <a href={teamMembers.portfolio} target="_blank" rel="noreferrer"> Portfolio </a> 
             </Description>
         </Card>
     )

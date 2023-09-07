@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
 
@@ -123,23 +123,43 @@ const ContactButton = styled.input`
 
 
 const Contact = () => {
-
-  //hooks
-  const [open, setOpen] = React.useState(false);
+  // Hooks
+  const [open, setOpen] = useState(false);
+  const [isValid, setIsValid] = useState(false);
+  const [emailError, setEmailError] = useState('');
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_6jw38uh', 'template_o3j1oh7', form.current, 'ePsTtr0xZJnMgBKZH')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+    if (isValid) {
+      emailjs
+        .sendForm('service_6jw38uh', 'template_o3j1oh7', form.current, 'ePsTtr0xZJnMgBKZH')
+        .then((result) => {
+          setOpen(true);
+          form.current.reset();
+        })
+        .catch((error) => {
+          console.log(error.text);
+        });
+    } else {
+      alert('Por favor, completa todos los campos correctamente.');
+    }
+  };
 
+  const handleEmailChange = (e) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    const emailInput = e.target.value.trim();
 
+    // Validar el correo electrónico con regex
+    setIsValid(emailRegex.test(emailInput));
+
+    // Mostrar mensaje de error si el correo electrónico no es válido
+    if (!emailRegex.test(emailInput)) {
+      setEmailError('Por favor, ingresa un correo electrónico válido.');
+    } else {
+      setEmailError('');
+    }
+  };
 
   return (
     <Container id="Contact">
@@ -148,22 +168,37 @@ const Contact = () => {
         <Desc>Escribinos por cualquier sugerencia o proyecto que tengas para nosotros!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email 🚀</ContactTitle>
-          <ContactInput placeholder="Tu Email" name="from_email" />
-          <ContactInput placeholder="Nombre" name="from_name" />
-          <ContactInput placeholder="Asunto" name="subject" />
-          <ContactInputMessage placeholder="Mensaje" rows="4" name="message" />
-          <ContactButton type="submit" value="Enviar" />
+          <ContactInput
+            placeholder="Tu Email"
+            name="from_email"
+            onChange={handleEmailChange}
+          />
+          {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
+          <ContactInput
+            placeholder="Nombre"
+            name="from_name"
+          />
+          <ContactInput
+            placeholder="Asunto"
+            name="subject"
+          />
+          <ContactInputMessage
+            placeholder="Mensaje"
+            rows="4"
+            name="message"
+          />
+          <ContactButton type="submit" value="Enviar" disabled={!isValid} />
         </ContactForm>
         <Snackbar
           open={open}
           autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
+          onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
         />
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
